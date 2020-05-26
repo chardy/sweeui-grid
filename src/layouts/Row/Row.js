@@ -2,20 +2,19 @@ import getClass from '../Init/classNames';
 import React from 'react';
 import PropTypes from 'prop-types';
 import createProps from '../Init/createProps';
-import { ViewportSizeType } from '../Init/types';
 
 const rowKeys = ['start', 'center', 'end', 'top', 'middle', 'bottom', 'around', 'between'];
 
 const propTypes = {
   reverse: PropTypes.bool,
-  start: ViewportSizeType,
-  center: ViewportSizeType,
-  end: ViewportSizeType,
-  top: ViewportSizeType,
-  middle: ViewportSizeType,
-  bottom: ViewportSizeType,
-  around: ViewportSizeType,
-  between: ViewportSizeType,
+  start: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  center: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  end: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  top: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  middle: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  bottom: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  around: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  between: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
   className: PropTypes.string,
   children: PropTypes.node
 };

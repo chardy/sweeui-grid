@@ -2,22 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import createProps from '../Init/createProps';
 import getClass from '../Init/classNames';
-import { ColumnSizeType, ViewportSizeType } from '../Init/types';
 
 const propTypes = {
-  xs: ColumnSizeType,
-  sm: ColumnSizeType,
-  md: ColumnSizeType,
-  lg: ColumnSizeType,
-  xl: ColumnSizeType,
+  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  md: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  xl: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   xsOffset: PropTypes.number,
   smOffset: PropTypes.number,
   mdOffset: PropTypes.number,
   lgOffset: PropTypes.number,
   xlOffset: PropTypes.number,
-  first: ViewportSizeType,
-  last: ViewportSizeType,
-  hidden: ViewportSizeType,
+  first: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  last: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
+  hidden: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
   className: PropTypes.string,
   children: PropTypes.node
 };
